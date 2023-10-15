@@ -7,6 +7,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @foreach ([
                     'courts.index' => 'Courts',
+                    'schedule.index' => 'Schedule',
                 ] as $route => $title)
                     <li class="nav-item">
                         <a class="nav-link {{ Route::is($route) ? 'active' : '' }}"

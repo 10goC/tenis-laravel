@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourtController;
+use App\Http\Controllers\ScheduleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::resource('courts', CourtController::class);
+
+Route::get('/schedule', [ScheduleController::class, 'index'])->name('schedule.index');
+Route::post('/schedule/store', [ScheduleController::class, 'store'])->name('schedule.store');
