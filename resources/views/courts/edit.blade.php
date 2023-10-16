@@ -1,6 +1,11 @@
 @extends('layout')
 @section('content')
     <h1>Edit court</h1>
+
+    @error('name')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+
     <form action="{{ route('courts.update', $court->id) }}" method="POST">
         @csrf
         @method('PUT')

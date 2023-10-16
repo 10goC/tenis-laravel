@@ -6,10 +6,6 @@
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    @error('name')
-        <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
-
     <a class="btn btn-primary mb-3" href="{{ route('courts.create') }}">Add new court</a>
     <table class="table table-striped">
         <thead>
